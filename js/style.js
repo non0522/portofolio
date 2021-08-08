@@ -28,6 +28,8 @@ $(window).bind('load',function(){
   })
 
 
+// ==========================================================================
+//ハンバーガーボタン用jQuery
   jQuery( function( $ ) {
     $( ".js-hamburger" ).on( "click", function() {
       $( this ).toggleClass( "is-open" );
@@ -36,6 +38,8 @@ $(window).bind('load',function(){
     } );
   } );
 
+// ==========================================================================
+//ハンバーガーボタンオープン時、メニューをクリックした時にメニューを閉じる
   $('.p-gnav a[href]').on('click', function(event) {
     $('.js-hamburger').trigger('click');
 });
