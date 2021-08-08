@@ -1,0 +1,30 @@
+.c-triangle {
+    display: flex;
+    // background: white;
+
+    &__right {
+        display: table;
+        width: 50%;
+        height: 3px;
+        background-color: #696969;
+        transform: skewY(-20deg);
+        margin-top: 10vw;
+        @include responsive(tab){
+            margin-top: 8vw;
+            transform: skewY(-15deg);
+        }
+    }
+    &__left {
+        display: table;
+        width: 50%;
+        height: 3px;
+        background-color: #696969;
+        transform: skewY(20deg);
+        margin-top: 10vw;
+        @include responsive(tab){
+            margin-top: 8vw;
+            transform: skewY(15deg);
+        }
+
+    }
+}

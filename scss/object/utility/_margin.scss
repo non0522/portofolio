@@ -1,0 +1,6 @@
+.u-margin-lr {
+    margin: 0 20px;
+    @include responsive(tab) {
+        margin: 0 40px;
+    }
+}

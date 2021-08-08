@@ -1,0 +1,47 @@
+.c-bar {
+    align-items: flex-end;
+    background-color: #eee;
+    color: #666;
+    font-size: 8pt;
+    margin: 0 0 12px 0;
+    line-height: 2;
+    display: flex;
+    @include responsive(tab) {
+        width: 90%;
+    }
+
+    &__fill {
+        color: white;
+        width: 100%;
+        background-color: #06A1A6;
+        padding: 0;
+        text-align: center;
+        line-height: 2;
+        
+
+        &__tag {
+            color: white;
+            width: 60px;
+            background-color: #11C1C9;
+            line-height: 2.5;
+            z-index: 1;
+        }
+    }
+    span {
+        color: #7e7e7e;
+        line-height: 2.5;
+        position: absolute;
+        right: 25px;
+        @include responsive(tab) {
+            right: 12%;
+        }
+    }
+}
+.js-animation.act {
+    animation: expand 1.5s ease;
+
+}
+@keyframes expand {
+    from {width: 0%;}
+    to　{width: auto;}
+}

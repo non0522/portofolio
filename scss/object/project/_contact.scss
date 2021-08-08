@@ -1,0 +1,32 @@
+.p-contact {
+    padding: 80px 0 160px;
+    // margin-bottom: 50px;
+    // height: 100vh;
+    text-align: center;
+    &__input {
+        display: flex;
+        flex-direction: column;
+        p {
+            // width: 100%;
+            padding-left: 20px;
+            background: white;
+            line-height: 3;
+            margin: 20px 20px;
+            border: rgba(165, 165, 165, 0.5) 1px solid;
+            text-align: left;
+            // border-radius: 5px;
+            input {
+                width: 100%;
+                
+            }
+        }
+        &__message{
+            height: 200px;
+        }
+        p:last-child {
+            color: white;
+            
+            background: rgb(165, 165, 165,);
+        }
+    }
+}

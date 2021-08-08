@@ -1,0 +1,32 @@
+.c-subtitle {
+    font-weight: bold;
+    font-size: 24px;
+    @include responsive(tab) {
+        font-size: 32px;
+    }
+}
+
+.c-subtitle--vertical {
+    writing-mode: vertical-rl;
+}
+
+.c-subtitle--skills {
+    padding: 80px 0 20px;
+    color: #05A0A6;
+    text-align: center;
+    @include responsive(tab) {
+        writing-mode: vertical-rl;
+        position: absolute;
+        bottom: 40px;
+        right: 20px;
+    }
+}
+.c-subtitle--works {
+    margin: 80px 0 40px; 
+    @include responsive(tab) {
+        margin: 100px 0 40px;
+    }
+}
+
+
+

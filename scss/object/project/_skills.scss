@@ -1,0 +1,33 @@
+.p-skills {
+    // height: 100vh;
+    background: white;
+    position: relative;
+    @include responsive(tab) {
+        padding-top: 80px;
+        height: 100vh;
+    }
+    &__catch {
+        margin: 0 40px;
+        ul {
+            display: flex;
+            flex-direction: column;
+            // justify-content: center;
+            @include responsive(tab) {
+                flex-direction: row;
+                justify-content: space-evenly;
+            }
+        }
+    }
+    &__wrap {
+        @include responsive(tab) {
+            display: flex;
+        }
+        .c-diagram {
+            @include responsive(tab) {
+                
+                width: 30%;
+
+            }
+        }
+    }
+}

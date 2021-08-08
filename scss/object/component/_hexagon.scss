@@ -1,0 +1,38 @@
+.c-hexagon {
+    width: 100px;
+    height: 176px;
+    background: #11C2C8;
+    position: relative;
+    // margin-bottom: 40px;
+    left: calc(50% - 50px);
+    display: flex;
+    flex-direction: column-reverse;
+    @include responsive(tab) {
+        width: 70px;
+        height: 121px;
+        // left: inherit;
+        // margin: 40px;
+    }
+  }
+  
+ 
+  
+  .c-hexagon::before,
+  .c-hexagon::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #11C2C8;
+    z-index: 0;
+  }
+  
+  .c-hexagon::before {
+    transform: rotate(60deg);
+  }
+  
+  .c-hexagon::after {
+    transform: rotate(-60deg);
+  }

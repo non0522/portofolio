@@ -1,0 +1,59 @@
+.p-about {
+    color: white;
+    background-color: rgba(0, 0, 0, .9);
+    height: auto;
+    @include responsive(tab) {
+        height: 100vh;
+
+    }
+    h2 {
+        padding: 100px 20px 0;
+        @include responsive(tab) {
+            padding: 100px 40px 0; 
+        }
+    }
+
+    article {
+        position: relative;
+        @include responsive(tab) {
+            
+
+        }
+        img {
+            position: absolute;
+            max-height: 200px;
+            width: 60%;
+            object-fit: cover;
+            @include responsive(tab){
+                max-height: 370px;
+                width: 50%;
+            }
+            @include responsive(pc) {
+                max-height: 500px;
+            }
+            &:nth-child(1) {
+                top: 40px;
+                left: 5%;
+                @include responsive(tab) {
+                    top: -160px;
+                    left: 15%;
+                }
+                @include responsive(pc) {
+                    left: 16%;
+                }
+            }
+            &:nth-child(2) {
+                top: -40px;
+                right: 3%;
+                @include responsive(tab){
+                    top: 50px;
+                    right: 0;
+                }
+                @include responsive(pc) {
+                    right: 2%;
+                }
+            }
+
+        }
+    }
+}

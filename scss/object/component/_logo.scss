@@ -1,0 +1,7 @@
+.c-logo {
+    font-size: 2rem;
+    width: 80px;
+    @include responsive(tab) {
+        width: 100px;
+    }
+}

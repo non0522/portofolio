@@ -1,0 +1,50 @@
+.p-works {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 20px 0;
+    text-align: center;
+    @include responsive(tab) {
+        padding:40px 40px;
+    }
+
+    &__list {
+        @include responsive(tab) {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+        }
+    }
+    a {
+        @include responsive(tab) {
+            width: 48%;
+            // padding: 0 40px;
+        }
+        img {
+            object-fit: contain;
+            margin-bottom: 20px;
+            height: 400px;
+            @include responsive(tab){
+                height: auto;
+                // object-fit: ;
+
+            }
+        }
+    }
+    &__img--sp {
+        width: auto;
+        @include responsive(tab) {
+            display: none;
+        }
+    }
+    &__img--tab {
+        display: none;
+        @include responsive(tab) {
+            display: block;
+        }
+    }
+    h4 {
+        padding-bottom: 50px;
+    }
+
+}

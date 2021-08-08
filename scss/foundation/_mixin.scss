@@ -1,0 +1,34 @@
+$breakpoints: (
+  'xs'     : (min-width: 0),
+  // 'sm'  : (min-width: 576px),
+  'tab'    : (min-width: 520px),
+  'pc'     : (min-width: 1025px),
+  'desktop': (min-width: 1280px),
+  'xxl'    : (min-width: 1400px)
+) !default;
+
+@mixin responsive($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media screen and #{inspect(map-get($breakpoints, $breakpoint))} {
+      @content;
+    }
+  }
+  @else {
+    @error "You should check responsives";
+  }
+}
+
+
+// How to write
+// ==================================================================
+// .box {
+//   font-size: 20px;
+  
+//   @include responsive(tab) {
+//     font-size: 30px;
+//   }
+  
+//   @include responsive(pc) {
+//     font-size: 50px;
+//   }
+// }

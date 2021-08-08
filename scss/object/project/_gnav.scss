@@ -1,0 +1,135 @@
+body {
+	overflow-x: hidden;
+}
+.p-gnav {
+	height: 40px;
+	position: relative;
+	> .list {
+        color: white;
+		transition: all 300ms 0s ease;
+		width         : 100vw;
+		height        : 100vh;
+		padding       : 70px 50px;
+		position      : fixed;
+		top           : 70px;
+		background-color: rgba(0, 0, 0, 0.9);
+		display       : flex;
+		flex-direction: column;
+		align-items   : center;
+		z-index       : 100;
+		overflow-y    : auto;
+		left: 100%;
+		@include responsive(tab) {
+            color: black;
+			width         : inherit;
+			height        : inherit;
+			padding       : inherit;
+			position      : static;
+			background    : inherit;
+			flex-direction: row;
+			transition: inherit;
+		}
+		> li {
+			margin-bottom: 50px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+			@include responsive(tab) {
+				margin-bottom: 0;
+			}
+		}
+	}
+	> .list {
+		@include responsive(tab) {
+			// height: 60px;
+			display: flex;
+			align-items: center;
+		}
+		li {
+			font-size: 1.4rem;
+			@include responsive(tab) {
+				margin-right: 20px;
+				font-size   : 1.2rem;
+			}
+			a {
+				@include responsive(tab) {
+					font-weight: normal;
+					white-space: nowrap;
+				}
+			}
+		}
+	}
+	&.is-open {
+		> .list {
+			left: 0;
+		}
+		.c-arrow--top-l {
+			&::before {
+				display: none;
+			}
+		}
+	}
+}
+
+$btnWidth: 20px;
+$btnHeight: 1px;
+
+.p-hamburger {
+	width           : 40px;
+	height          : 40px;
+	// background-color: #2CB8D9;
+	position        : relative;
+    border: black 1px solid;
+    border-radius: 5px;
+
+	@include responsive(tab) {
+		display: none;
+	}
+	&::before,
+	&::after {
+		content   : "";
+		width     : 20px;
+		height    : 2px;
+		// background: #fff;
+        background: black;
+		position  : absolute;
+		left      : calc( 50% - ( 20px / 2 ) );
+		display   : block;
+		transition: transform 0.2s;
+	}
+	&::before {
+		top: 10px;
+	}
+	&::after {
+		top: 28px;
+	}
+	> span {
+		width          : 20px;
+		height         : 2px;
+		font-size      : 0;
+        background: black;
+		// background     : linear-gradient( to right, #fff, #fff ) repeat-x #fff;
+		// background-size: auto 2px;
+		position       : absolute;
+		left           : calc( 50% - ( 20px / 2 ) );
+		top            : 50%;
+		transition     : transform 0.2s;
+	}
+	&.is-open {
+		&::before {
+			transform: rotate( 45deg );
+			top      : 18px;
+		}
+		&::after {
+			transform: rotate( -45deg );
+			top      : 18px;
+		}
+		> span {
+			background: none;
+		}
+	}
+}
+
+// body.is-open {
+	// position: fixed;
+// }

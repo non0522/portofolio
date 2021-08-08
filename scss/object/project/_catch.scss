@@ -1,0 +1,36 @@
+.p-catch {
+    margin-top: 20px;
+    text-align: center;
+    position: relative;
+
+    h3 {
+        // height: 100%;
+        font-size: 20px;
+        font-weight: bold;
+        color: #fff;
+        // position: absolute;
+        // left: 0;
+        // top: 55%;
+        // margin: auto;
+        // width: 100%;
+        margin-bottom: 20px;
+        z-index: 1;
+        @include responsive(tab) {
+            left: -10px;
+            font-size: 14px;
+            top: 50%;
+        }
+
+    }
+
+    p {
+        margin: 20px 0 50px;
+        font-size: 14px;
+        @include responsive(tab){
+            font-size: 14px;
+            padding: 0 10px;
+            max-width: 300px;
+        }
+    }
+
+}
