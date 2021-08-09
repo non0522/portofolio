@@ -828,7 +828,7 @@ body {
 .p-works__imgframe {
   width: 100%;
   background-size: contain;
-  background-image: url(/img/frame-pc.png);
+  background-image: url(/img/アートボード.png);
   background-repeat: no-repeat;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -849,6 +849,121 @@ body {
 
 .p-works h4 {
   padding-bottom: 50px;
+}
+
+/*リンクの形状*/
+#page-top a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #942D2F;
+  border-radius: 5px;
+  width: 60px;
+  height: 60px;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 0.6rem;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+#page-top a:hover {
+  background: #777;
+}
+
+@media screen and (max-width: 768px) {
+  #page-top a:hover {
+    background: #942D2F;
+  }
+}
+
+/*リンクを右下に固定*/
+#page-top {
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  z-index: 2;
+  /*はじめは非表示*/
+  opacity: 0;
+  -webkit-transform: translateY(100px);
+          transform: translateY(100px);
+}
+
+/*　上に上がる動き　*/
+#page-top.UpMove {
+  -webkit-animation: UpAnime 0.5s forwards;
+          animation: UpAnime 0.5s forwards;
+}
+
+@-webkit-keyframes UpAnime {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes UpAnime {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+/*　下に下がる動き　*/
+#page-top.DownMove {
+  -webkit-animation: DownAnime 0.5s forwards;
+          animation: DownAnime 0.5s forwards;
+}
+
+@-webkit-keyframes DownAnime {
+  from {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
+  }
+}
+
+@keyframes DownAnime {
+  from {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
+  }
+}
+
+#footer {
+  position: relative;
+  z-index: 2;
 }
 
 .p-contact {
