@@ -797,6 +797,7 @@ body {
 @media screen and (min-width: 520px) {
   .p-works a {
     width: 48%;
+    margin-bottom: 50px;
   }
 }
 
@@ -810,6 +811,7 @@ body {
 @media screen and (min-width: 520px) {
   .p-works a img {
     height: auto;
+    margin-bottom: 0px;
   }
 }
 
@@ -823,6 +825,17 @@ body {
   }
 }
 
+.p-works__imgframe {
+  width: 100%;
+  background-size: contain;
+  background-image: url(/img/frame-pc.png);
+  background-repeat: no-repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 20px;
+}
+
 .p-works__img--tab {
   display: none;
 }
@@ -830,6 +843,7 @@ body {
 @media screen and (min-width: 520px) {
   .p-works__img--tab {
     display: block;
+    padding: 12% 5% 4% 5%;
   }
 }
 

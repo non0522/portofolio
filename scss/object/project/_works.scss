@@ -18,7 +18,7 @@
     a {
         @include responsive(tab) {
             width: 48%;
-            // padding: 0 40px;
+            margin-bottom: 50px;
         }
         img {
             object-fit: contain;
@@ -26,7 +26,7 @@
             height: 400px;
             @include responsive(tab){
                 height: auto;
-                // object-fit: ;
+                margin-bottom: 0px;
 
             }
         }
@@ -37,10 +37,20 @@
             display: none;
         }
     }
+    &__imgframe {
+        width: 100%;
+        background-size: contain;
+        background-image: url(/img/frame-pc.png);
+        background-repeat: no-repeat;
+        display: flex;
+        margin-bottom: 20px;
+    }
     &__img--tab {
         display: none;
         @include responsive(tab) {
             display: block;
+            padding: 12% 5% 4% 5%;
+            
         }
     }
     h4 {
