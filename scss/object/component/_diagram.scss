@@ -1,0 +1,88 @@
+.c-diagram {
+    @include responsive(tab) {
+        height: 260px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0 auto;
+        position: relative;
+        overflow: hidden;
+        // margin: 0 20px;
+        // width: 30%;
+//         > p {
+//             color: #06A1A6;
+//             font-weight: bold;
+//             margin: 0 auto 20px;  
+//             font-size: 20px;
+//             animation: flash 1.5s linear infinite;
+//         }
+//             @keyframes flash {
+//                 0% { opacity: 1;}
+//                 50% { opacity: 0;}
+//                 100% { opacity: 1;}
+//   }
+  
+
+        &__base {
+            width: 170px;
+            height: 85px;
+            border: 5px solid #06A1A6;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            transition: all .35s cubic-bezier(.65,0,.35,1);
+
+            p {
+                font-size: 32px;
+                white-space: nowrap;
+                padding-bottom: 10px;
+            }
+            &:hover {
+                color: white;
+                background-color: #06A1A6;
+                border-radius: 0;
+
+            }
+        }
+
+        &__upper {
+            margin-bottom: 20px;
+            border-radius: 100px 100px 0 0;
+            &:hover {
+                margin-bottom: 60px;
+                & + .c-diagram__middle--right {
+                    left: 25px;
+                }
+            }
+        }
+
+        &__under {
+            padding-bottom: 20px;
+            border-radius: 0 0 150px 150px;
+            &:hover {
+                margin-top: 40px;
+                & + .c-diagram__middle--left {
+                    left: 40px;
+                    font-size: 10px;
+                }
+            }
+        }
+        &__middle--right {
+            color: #06A1A6;
+            font-size: 32px;
+            position: absolute;
+            top: 120px;
+            left: 200px;
+            transition: all .35s cubic-bezier(.65,0,.35,1);
+        }
+        &__middle--left {
+            color: #06A1A6;
+            font-size: 32px;
+            position: absolute;
+            top: 120px;
+            left: -200px;
+            transition: all .35s cubic-bezier(.65,0,.35,1);
+        }
+    }
+}

@@ -43,3 +43,12 @@ $(window).bind('load',function(){
   $('.p-gnav a[href]').on('click', function(event) {
     $('.js-hamburger').trigger('click');
 });
+
+// ==========================================================================
+//ハンバーガーボタン用jQuery
+// jQuery( function( $ ) {
+//   $( ".js-slide" ).hover (function() {
+//     $( this ).toggleClass( "is-appear" );
+//     $( ".c-diagram__middle" ).toggleClass( "is-appear" );
+//   } );
+// } );

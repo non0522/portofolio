@@ -21,13 +21,7 @@
     &__wrap {
         @include responsive(tab) {
             display: flex;
-        }
-        .c-diagram {
-            @include responsive(tab) {
-                
-                width: 30%;
-
-            }
+            // justify-content: flex-end;
         }
     }
 }
