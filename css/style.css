@@ -816,7 +816,7 @@ body {
 }
 
 .p-works__img--sp {
-  width: auto;
+  padding: 11% 5% 5% 5%;
 }
 
 @media screen and (min-width: 520px) {
@@ -827,13 +827,20 @@ body {
 
 .p-works__imgframe {
   width: 100%;
-  background-size: contain;
-  background-image: url(/img/アートボード.png);
-  background-repeat: no-repeat;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(/img/frame-sp.png);
   margin-bottom: 20px;
+}
+
+@media screen and (min-width: 520px) {
+  .p-works__imgframe {
+    background-image: url(/img/frame-pc.png);
+  }
 }
 
 .p-works__img--tab {

@@ -32,18 +32,24 @@
         }
     }
     &__img--sp {
-        width: auto;
+        // width: auto;
+        padding: 11% 5% 5% 5%;
         @include responsive(tab) {
             display: none;
         }
     }
     &__imgframe {
         width: 100%;
-        background-size: contain;
-        background-image: url(/img/アートボード.png);
-        background-repeat: no-repeat;
         display: flex;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-image: url(/img/frame-sp.png);
         margin-bottom: 20px;
+
+        @include responsive(tab) {
+          background-image: url(/img/frame-pc.png);
+        }
     }
     &__img--tab {
         display: none;
