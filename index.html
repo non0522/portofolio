@@ -21,12 +21,12 @@
         <header class="p-header u-margin-lr">
             <div class="p-header__wrapper">
                 <h1 class="c-logo"><img src="/img/name-logo.png" alt=""></h1>  
-                <nav class="p-gnav">
+                <nav class="p-gnav js-gnav">
                     <button class="p-hamburger p-gmenu--bt js-hamburger">
                         <span>menuボタン</span>
                     </button>
                     <ul class="list">
-                        <li><a href="#top">TOP</a></li>
+                        <li><a class="change" href="#top">TOP</a></li>
                         <li><a href="#about">ABOUT</a></li>
                         <li><a href="#skills">SKILLS</a></li>
                         <li><a href="#works">WORKS</a></li>
@@ -37,7 +37,7 @@
             </div>
         </header>
         <main class="p-main">
-            <section class="p-mainvidual">
+            <section class="p-mainvidual js-sec1">
                 <!-- <div class="u-align--main"></div> -->
                 <article class="p-mainvidual__contents">
                     <p class="js-typ">Hello,</p>
@@ -45,7 +45,7 @@
                     <p class="js-typ">Nozomu Dokoh</p>
                 </article>
             </section><!-- /.p-mainvidual -->
-            <section id="about" class="p-about">
+            <section id="about" class="p-about js-sec2">
                 <h2 class="c-subtitle c-subtitle--vertical">ABOUT ME</h2>
                 <article>
                     <img src="/img/aboutme-color.jpg" alt="" class="c-image--color">
@@ -61,7 +61,7 @@
                     </p>
                 </article>
             </section><!-- /.p-about -->
-            <section id="skills" class="p-skills">
+            <section id="skills" class="p-skills js-sec3">
                 <h2 class="c-subtitle c-subtitle--skills">SKILLS</h2>
                 <article class="p-skills__catch">
                     <ul>
@@ -121,10 +121,10 @@
                             <p class="">Codeing</p>
                         </div>
                         <div class="c-diagram__middle--right">Perfect!!</div>
-                        <div class="c-diagram__middle--left">So-so...</div>
                         <div class="c-diagram__under c-diagram__base js-slide">
                             <p class="">Design</p>
                         </div>
+                        <div class="c-diagram__middle--left">So-so...</div>
                         <!-- <img src="" alt=""> -->
                     </article>
                     <article class="p-chart">
@@ -175,7 +175,7 @@
                     </article><!-- /.p-chart -->
                 </section>
             </section><!-- /.p-skills -->
-            <section id="works" class="p-works">
+            <section id="works" class="p-works js-sec4">
                 <h2 class="c-subtitle c-subtitle--works">WORKS</h2>
                 <section class="p-works__list">
                     <a href="">
@@ -204,7 +204,7 @@
                     </a>
                 </section>
             </section><!-- /p.skills -->
-            <section id="contact" class="p-contact">
+            <section id="contact" class="p-contact js-sec5">
                 <div class="c-triangle">
                     <div class="c-triangle__left"></div>
                     <div class="c-triangle__right"></div>
@@ -224,7 +224,7 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
     <script src="js/bubbly-bg.js"></script>
     <script src="js/bubbly.js"></script>
-    <!-- <script type='text/javascript' src='./js/midnight.jquery.min.js?ver=5.4.1'></script> -->
+    <script type='text/javascript' src='./js/midnight.jquery.min.js?ver=5.4.1'></script>
     <script src="js/style.js"></script>
 </body>
 

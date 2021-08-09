@@ -20,6 +20,8 @@ body {
 		overflow-y    : auto;
 		left: 100%;
 		@include responsive(tab) {
+			display: flex;
+			align-items: center;
             color: black;
 			width         : inherit;
 			height        : inherit;
@@ -31,31 +33,14 @@ body {
 		}
 		> li {
 			margin-bottom: 50px;
+			font-size: 1.4rem;
 			&:last-child {
 				margin-bottom: 0;
 			}
 			@include responsive(tab) {
 				margin-bottom: 0;
-			}
-		}
-	}
-	> .list {
-		@include responsive(tab) {
-			// height: 60px;
-			display: flex;
-			align-items: center;
-		}
-		li {
-			font-size: 1.4rem;
-			@include responsive(tab) {
 				margin-right: 20px;
 				font-size   : 1.2rem;
-			}
-			a {
-				@include responsive(tab) {
-					font-weight: normal;
-					white-space: nowrap;
-				}
 			}
 		}
 	}
@@ -70,14 +55,24 @@ body {
 		}
 	}
 }
-
-$btnWidth: 20px;
-$btnHeight: 1px;
+.js-gnav.is-white {
+	> .list{
+		@include responsive(tab) {
+			color: white;
+		}
+	}
+}
+.js-gnav.is-black {
+	> .list{
+		@include responsive(tab) {
+			color: black;
+		}
+	}
+}
 
 .p-hamburger {
 	width           : 40px;
 	height          : 40px;
-	// background-color: #2CB8D9;
 	position        : relative;
     border: black 1px solid;
     border-radius: 5px;
@@ -90,7 +85,6 @@ $btnHeight: 1px;
 		content   : "";
 		width     : 20px;
 		height    : 2px;
-		// background: #fff;
         background: black;
 		position  : absolute;
 		left      : calc( 50% - ( 20px / 2 ) );
@@ -108,8 +102,6 @@ $btnHeight: 1px;
 		height         : 2px;
 		font-size      : 0;
         background: black;
-		// background     : linear-gradient( to right, #fff, #fff ) repeat-x #fff;
-		// background-size: auto 2px;
 		position       : absolute;
 		left           : calc( 50% - ( 20px / 2 ) );
 		top            : 50%;
@@ -129,7 +121,3 @@ $btnHeight: 1px;
 		}
 	}
 }
-
-// body.is-open {
-	// position: fixed;
-// }

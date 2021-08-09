@@ -1,5 +1,5 @@
 .c-diagram {
-    @include responsive(tab) {
+    // @include responsive(tab) {
         height: 260px;
         display: flex;
         flex-direction: column;
@@ -64,7 +64,7 @@
                 margin-top: 40px;
                 & + .c-diagram__middle--left {
                     left: 40px;
-                    font-size: 10px;
+                    // font-size: 10px;
                 }
             }
         }
@@ -84,5 +84,5 @@
             left: -200px;
             transition: all .35s cubic-bezier(.65,0,.35,1);
         }
-    }
+
 }

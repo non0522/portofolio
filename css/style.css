@@ -109,89 +109,97 @@ img {
   }
 }
 
-@media screen and (min-width: 520px) {
-  .c-diagram {
-    height: 260px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    margin: 0 auto;
-    position: relative;
-    overflow: hidden;
-  }
-  .c-diagram__base {
-    width: 170px;
-    height: 85px;
-    border: 5px solid #06A1A6;
-    overflow: hidden;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;
-    -webkit-transition: all 0.35s cubic-bezier(0.65, 0, 0.35, 1);
-    transition: all 0.35s cubic-bezier(0.65, 0, 0.35, 1);
-  }
-  .c-diagram__base p {
-    font-size: 32px;
-    white-space: nowrap;
-    padding-bottom: 10px;
-  }
-  .c-diagram__base:hover {
-    color: white;
-    background-color: #06A1A6;
-    border-radius: 0;
-  }
-  .c-diagram__upper {
-    margin-bottom: 20px;
-    border-radius: 100px 100px 0 0;
-  }
-  .c-diagram__upper:hover {
-    margin-bottom: 60px;
-  }
-  .c-diagram__upper:hover + .c-diagram__middle--right {
-    left: 25px;
-  }
-  .c-diagram__under {
-    padding-bottom: 20px;
-    border-radius: 0 0 150px 150px;
-  }
-  .c-diagram__under:hover {
-    margin-top: 40px;
-  }
-  .c-diagram__under:hover + .c-diagram__middle--left {
-    left: 40px;
-    font-size: 10px;
-  }
-  .c-diagram__middle--right {
-    color: #06A1A6;
-    font-size: 32px;
-    position: absolute;
-    top: 120px;
-    left: 200px;
-    -webkit-transition: all 0.35s cubic-bezier(0.65, 0, 0.35, 1);
-    transition: all 0.35s cubic-bezier(0.65, 0, 0.35, 1);
-  }
-  .c-diagram__middle--left {
-    color: #06A1A6;
-    font-size: 32px;
-    position: absolute;
-    top: 120px;
-    left: -200px;
-    -webkit-transition: all 0.35s cubic-bezier(0.65, 0, 0.35, 1);
-    transition: all 0.35s cubic-bezier(0.65, 0, 0.35, 1);
-  }
+.c-diagram {
+  height: 260px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.c-diagram__base {
+  width: 170px;
+  height: 85px;
+  border: 5px solid #06A1A6;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-transition: all 0.35s cubic-bezier(0.65, 0, 0.35, 1);
+  transition: all 0.35s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+.c-diagram__base p {
+  font-size: 32px;
+  white-space: nowrap;
+  padding-bottom: 10px;
+}
+
+.c-diagram__base:hover {
+  color: white;
+  background-color: #06A1A6;
+  border-radius: 0;
+}
+
+.c-diagram__upper {
+  margin-bottom: 20px;
+  border-radius: 100px 100px 0 0;
+}
+
+.c-diagram__upper:hover {
+  margin-bottom: 60px;
+}
+
+.c-diagram__upper:hover + .c-diagram__middle--right {
+  left: 25px;
+}
+
+.c-diagram__under {
+  padding-bottom: 20px;
+  border-radius: 0 0 150px 150px;
+}
+
+.c-diagram__under:hover {
+  margin-top: 40px;
+}
+
+.c-diagram__under:hover + .c-diagram__middle--left {
+  left: 40px;
+}
+
+.c-diagram__middle--right {
+  color: #06A1A6;
+  font-size: 32px;
+  position: absolute;
+  top: 120px;
+  left: 200px;
+  -webkit-transition: all 0.35s cubic-bezier(0.65, 0, 0.35, 1);
+  transition: all 0.35s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+.c-diagram__middle--left {
+  color: #06A1A6;
+  font-size: 32px;
+  position: absolute;
+  top: 120px;
+  left: -200px;
+  -webkit-transition: all 0.35s cubic-bezier(0.65, 0, 0.35, 1);
+  transition: all 0.35s cubic-bezier(0.65, 0, 0.35, 1);
 }
 
 .c-bar {
@@ -420,6 +428,12 @@ body {
 
 @media screen and (min-width: 520px) {
   .p-gnav > .list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     color: black;
     width: inherit;
     height: inherit;
@@ -437,6 +451,7 @@ body {
 
 .p-gnav > .list > li {
   margin-bottom: 50px;
+  font-size: 1.4rem;
 }
 
 .p-gnav > .list > li:last-child {
@@ -446,35 +461,8 @@ body {
 @media screen and (min-width: 520px) {
   .p-gnav > .list > li {
     margin-bottom: 0;
-  }
-}
-
-@media screen and (min-width: 520px) {
-  .p-gnav > .list {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-}
-
-.p-gnav > .list li {
-  font-size: 1.4rem;
-}
-
-@media screen and (min-width: 520px) {
-  .p-gnav > .list li {
     margin-right: 20px;
     font-size: 1.2rem;
-  }
-}
-
-@media screen and (min-width: 520px) {
-  .p-gnav > .list li a {
-    font-weight: normal;
-    white-space: nowrap;
   }
 }
 
@@ -484,6 +472,18 @@ body {
 
 .p-gnav.is-open .c-arrow--top-l::before {
   display: none;
+}
+
+@media screen and (min-width: 520px) {
+  .js-gnav.is-white > .list {
+    color: white;
+  }
+}
+
+@media screen and (min-width: 520px) {
+  .js-gnav.is-black > .list {
+    color: black;
+  }
 }
 
 .p-hamburger {
