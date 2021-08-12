@@ -35,6 +35,18 @@ img {
   }
 }
 
+.c-logo img.is-white:nth-child(1) {
+  display: none;
+}
+
+.c-logo img:nth-child(2) {
+  display: none;
+}
+
+.c-logo img:nth-child(2).is-white {
+  display: block;
+}
+
 .c-subtitle {
   font-weight: bold;
   font-size: 24px;
@@ -110,10 +122,8 @@ img {
 }
 
 .c-diagram {
+  display: none;
   height: 260px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -124,6 +134,14 @@ img {
   margin: 0 auto;
   position: relative;
   overflow: hidden;
+}
+
+@media screen and (min-width: 520px) {
+  .c-diagram {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 .c-diagram__base {
@@ -162,6 +180,7 @@ img {
 }
 
 .c-diagram__upper:hover {
+  border-radius: 5px 5px 0 0;
   margin-bottom: 60px;
 }
 
@@ -171,10 +190,11 @@ img {
 
 .c-diagram__under {
   padding-bottom: 20px;
-  border-radius: 0 0 150px 150px;
+  border-radius: 0 0 100px 100px;
 }
 
 .c-diagram__under:hover {
+  border-radius: 0 0 5px 5px;
   margin-top: 40px;
 }
 
@@ -486,70 +506,8 @@ body {
   }
 }
 
-.p-hamburger {
-  width: 40px;
-  height: 40px;
-  position: relative;
-  border: black 1px solid;
-  border-radius: 5px;
-}
-
-@media screen and (min-width: 520px) {
-  .p-hamburger {
-    display: none;
-  }
-}
-
-.p-hamburger::before, .p-hamburger::after {
-  content: "";
-  width: 20px;
-  height: 2px;
-  background: black;
-  position: absolute;
-  left: calc( 50% - ( 20px / 2 ));
-  display: block;
-  -webkit-transition: -webkit-transform 0.2s;
-  transition: -webkit-transform 0.2s;
-  transition: transform 0.2s;
-  transition: transform 0.2s, -webkit-transform 0.2s;
-}
-
-.p-hamburger::before {
-  top: 10px;
-}
-
-.p-hamburger::after {
-  top: 28px;
-}
-
-.p-hamburger > span {
-  width: 20px;
-  height: 2px;
-  font-size: 0;
-  background: black;
-  position: absolute;
-  left: calc( 50% - ( 20px / 2 ));
-  top: 50%;
-  -webkit-transition: -webkit-transform 0.2s;
-  transition: -webkit-transform 0.2s;
-  transition: transform 0.2s;
-  transition: transform 0.2s, -webkit-transform 0.2s;
-}
-
-.p-hamburger.is-open::before {
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-  top: 18px;
-}
-
-.p-hamburger.is-open::after {
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
-  top: 18px;
-}
-
-.p-hamburger.is-open > span {
-  background: none;
+.p-header .p-gnav .is-white li {
+  color: white;
 }
 
 .p-mainvidual {
@@ -794,6 +752,14 @@ body {
   }
 }
 
+.p-works a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
 @media screen and (min-width: 520px) {
   .p-works a {
     width: 48%;
@@ -815,21 +781,8 @@ body {
   }
 }
 
-.p-works__img--sp {
-  padding: 11% 5% 5% 5%;
-}
-
-@media screen and (min-width: 520px) {
-  .p-works__img--sp {
-    display: none;
-  }
-}
-
 .p-works__imgframe {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: inline-block;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -839,7 +792,35 @@ body {
 
 @media screen and (min-width: 520px) {
   .p-works__imgframe {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     background-image: url(/img/frame-pc.png);
+  }
+}
+
+.p-works__imgframe:hover {
+  opacity: .3;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.p-works__imgframe:hover + .p-works__hide {
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.p-works__img--sp {
+  padding: 18% 8% 8% 8%;
+}
+
+@media screen and (min-width: 520px) {
+  .p-works__img--sp {
+    display: none;
   }
 }
 
@@ -852,6 +833,31 @@ body {
     display: block;
     padding: 12% 5% 4% 5%;
   }
+}
+
+.p-works__hide {
+  color: white;
+  font-size: 32px;
+  white-space: nowrap;
+  position: absolute;
+  top: 40%;
+  left: 100%;
+  -webkit-transition: all 0.35s cubic-bezier(0.65, 0, 0.35, 1);
+  transition: all 0.35s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+.p-works__hide:hover {
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.p-works__hide:hover + .p-works__imgframe {
+  opacity: .3;
+  -webkit-transition: .5s;
+  transition: .5s;
 }
 
 .p-works h4 {
@@ -986,15 +992,21 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 80%;
+  margin: 0 auto;
 }
 
 .p-contact__input p {
+  width: 100%;
+  max-width: 500px;
   padding-left: 20px;
+  margin: 20px 20px;
   background: white;
   line-height: 3;
-  margin: 20px 20px;
   border: rgba(165, 165, 165, 0.5) 1px solid;
-  text-align: left;
 }
 
 .p-contact__input p input {
@@ -1008,6 +1020,84 @@ body {
 .p-contact__input p:last-child {
   color: white;
   background: #a5a5a5;
+}
+
+.p-hamburger {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  border: black 1px solid;
+  border-radius: 5px;
+}
+
+.p-hamburger.is-white {
+  border-color: white;
+}
+
+@media screen and (min-width: 520px) {
+  .p-hamburger {
+    display: none;
+  }
+}
+
+.p-hamburger::before, .p-hamburger::after {
+  content: "";
+  width: 20px;
+  height: 2px;
+  background: black;
+  position: absolute;
+  left: calc( 50% - ( 20px / 2 ));
+  display: block;
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
+}
+
+.p-hamburger.is-white::before, .p-hamburger.is-white::after {
+  background: white;
+}
+
+.p-hamburger::before {
+  top: 10px;
+}
+
+.p-hamburger::after {
+  top: 28px;
+}
+
+.p-hamburger > span {
+  width: 20px;
+  height: 2px;
+  font-size: 0;
+  background: black;
+  position: absolute;
+  left: calc( 50% - ( 20px / 2 ));
+  top: 50%;
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
+}
+
+.p-hamburger.is-white > span {
+  background-color: white;
+}
+
+.p-hamburger.is-open::before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  top: 18px;
+}
+
+.p-hamburger.is-open::after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  top: 18px;
+}
+
+.p-hamburger.is-open > span {
+  background: none;
 }
 
 .u-margin-lr {

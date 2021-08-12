@@ -45,24 +45,54 @@ $('.p-gnav a[href]').on('click', function(event) {
 });
 
 
+$("要素").addClass("changed");
+// ==========================================================================
+//セクション毎にメニュー色変更
 $(function(){	
   $(window).scroll(function(){
 //セクション２から３の間はこれ
 if ($(window).scrollTop() > $('.js-sec2').offset().top && $(window).scrollTop() < $('.js-sec3').offset().top){
-$(".list").css("color", "#fff");
+$(".js-color").addClass("is-white");
 }
 else if ($(window).scrollTop() > $('.js-sec3').offset().top && $(window).scrollTop() < $('.js-sec4').offset().top){
-  $(".list").css("color", "#000");
+$(".js-color").removeClass("is-white");
 }
 else if ($(window).scrollTop() > $('.js-sec4').offset().top && $(window).scrollTop() < $('.js-sec5').offset().top){
-  $(".list").css("color", "#fff");
-}//セクション5より進んだらこれ
+$(".js-color").addClass("is-white");
+}
+//セクション5より進んだらこれ
 else if($(window).scrollTop() > $('.js-sec5').offset().top){
-$(".list").css("color", "#000");
-}else//それ以外（つまりセクション１である場合）はこれ
-  $(".list").css("color", "#000");
+$(".js-color").removeClass("is-white");
+}
+else//それ以外（つまりセクション１である場合）はこれ
+$(".js-color").removeClass("is-white");
    });
 }); 
+// $(function(){	
+//   $(window).scroll(function(){
+// //セクション２から３の間はこれ
+// if ($(window).scrollTop() > $('.js-sec2').offset().top && $(window).scrollTop() < $('.js-sec3').offset().top){
+// $(".list").css("color", "#fff");
+// $(".p-hamburger").css("border-color", "#fff") ;
+// }
+// else if ($(window).scrollTop() > $('.js-sec3').offset().top && $(window).scrollTop() < $('.js-sec4').offset().top){
+//   $(".list").css("color", "#000");
+//   $(".p-hamburger").css("border-color", "#000");
+// }
+// else if ($(window).scrollTop() > $('.js-sec4').offset().top && $(window).scrollTop() < $('.js-sec5').offset().top){
+//   $(".list").css("color", "#fff");
+//   $(".p-hamburger").css("border-color", "#fff");
+// }
+// //セクション5より進んだらこれ
+// else if($(window).scrollTop() > $('.js-sec5').offset().top){
+// $(".list").css("color", "#000");
+// $(".p-hamburger").css("border-color", "#000");
+// }
+// else//それ以外（つまりセクション１である場合）はこれ
+//   $(".list").css("color", "#000");
+//   $(".p-hamburger").css("border-color", "#000");
+//    });
+// }); 
 
 
 

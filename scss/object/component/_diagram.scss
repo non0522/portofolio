@@ -1,27 +1,14 @@
 .c-diagram {
-    // @include responsive(tab) {
-        height: 260px;
+    display: none;
+    height: 260px;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    @include responsive(tab) {
         display: flex;
-        flex-direction: column;
-        justify-content: center;
-        margin: 0 auto;
-        position: relative;
-        overflow: hidden;
-        // margin: 0 20px;
-        // width: 30%;
-//         > p {
-//             color: #06A1A6;
-//             font-weight: bold;
-//             margin: 0 auto 20px;  
-//             font-size: 20px;
-//             animation: flash 1.5s linear infinite;
-//         }
-//             @keyframes flash {
-//                 0% { opacity: 1;}
-//                 50% { opacity: 0;}
-//                 100% { opacity: 1;}
-//   }
-  
+    }
 
         &__base {
             width: 170px;
@@ -50,6 +37,7 @@
             margin-bottom: 20px;
             border-radius: 100px 100px 0 0;
             &:hover {
+                border-radius: 5px 5px 0 0;
                 margin-bottom: 60px;
                 & + .c-diagram__middle--right {
                     left: 25px;
@@ -59,8 +47,9 @@
 
         &__under {
             padding-bottom: 20px;
-            border-radius: 0 0 150px 150px;
+            border-radius: 0 0 100px 100px;
             &:hover {
+                border-radius: 0 0 5px 5px;
                 margin-top: 40px;
                 & + .c-diagram__middle--left {
                     left: 40px;
