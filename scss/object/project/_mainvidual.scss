@@ -9,13 +9,14 @@
     }
     &__contents {
         position: absolute;
-        top: 50%;
+        top: 40%;
         left: 50%;
         @include responsive(tab) {
             // top: calc(50% - 100px);
         }
 
         p {
+            font-size: 16px;
             font-weight: bold;
             &:first-child {
                 font-size: 32px;

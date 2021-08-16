@@ -9,7 +9,7 @@
     h2 {
         padding: 100px 20px 0;
         @include responsive(tab) {
-            padding: 100px 40px 0; 
+            padding: 100px 60px 0; 
         }
     }
 
@@ -36,7 +36,7 @@
                 left: 5%;
                 @include responsive(tab) {
                     top: -160px;
-                    left: 15%;
+                    left: 20%;
                 }
                 @include responsive(pc) {
                     left: 16%;

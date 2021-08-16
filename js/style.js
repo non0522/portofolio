@@ -51,17 +51,17 @@ $("要素").addClass("changed");
 $(function(){	
   $(window).scroll(function(){
 //セクション２から３の間はこれ
-if ($(window).scrollTop() > $('.js-sec2').offset().top && $(window).scrollTop() < $('.js-sec3').offset().top){
+if ($(window).scrollTop() >= $('.js-sec2').offset().top && $(window).scrollTop() < $('.js-sec3').offset().top){
 $(".js-color").addClass("is-white");
 }
-else if ($(window).scrollTop() > $('.js-sec3').offset().top && $(window).scrollTop() < $('.js-sec4').offset().top){
+else if ($(window).scrollTop() >= $('.js-sec3').offset().top && $(window).scrollTop() < $('.js-sec4').offset().top){
 $(".js-color").removeClass("is-white");
 }
-else if ($(window).scrollTop() > $('.js-sec4').offset().top && $(window).scrollTop() < $('.js-sec5').offset().top){
+else if ($(window).scrollTop() >= $('.js-sec4').offset().top && $(window).scrollTop() <= $('.js-sec5').offset().top){
 $(".js-color").addClass("is-white");
 }
 //セクション5より進んだらこれ
-else if($(window).scrollTop() > $('.js-sec5').offset().top){
+else if($(window).scrollTop() >= $('.js-sec5').offset().top){
 $(".js-color").removeClass("is-white");
 }
 else//それ以外（つまりセクション１である場合）はこれ

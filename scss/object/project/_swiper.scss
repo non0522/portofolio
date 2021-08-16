@@ -1,0 +1,148 @@
+html,
+main {
+  position: relative;
+  height: 100%;
+}
+
+main {
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 80px 0 0;
+}
+
+main .swiper-container {
+  background-color: white;
+  width: 90%;
+  height: calc(96vh - 80px);
+  // height: 100%;
+  box-shadow: 2px 2px 9px 7px rgba(10,10,10,0.3);
+  z-index: inherit;
+  @include responsive(tab) {
+    padding-top: 30px;
+  }
+  .swiper-wrapper {
+    z-index: inherit;
+  }
+  .swiper-pagenation {
+    z-index: inherit;
+  }
+  
+  
+  .swiper-slide {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    // font-size: 18px;
+    background: #fff;
+    justify-content: center;
+    align-items: center;
+    @include responsive(tab) {
+      align-items: flex-start;
+      flex-direction: row;
+    }
+
+    img {
+      width: 100%;
+      height: 70%;
+      object-fit: contain;
+      @include responsive(tab){
+        width: 60%;
+        height: 100%;
+        
+      }
+      @include responsive(pc) {
+        // object-fit: cover;
+        object-position: top;
+      }
+    }
+
+    .swiper-img--sp {
+        padding-left: 4%;
+        @include responsive(tab) {
+            display: none;
+        }
+    }
+
+    .swiper-img--pc {
+        display: none;
+        @include responsive(tab) {
+            display: block;
+        }
+    }
+  }
+}
+
+
+.swiper-slide article {
+    border: black 1px solid;
+    padding:0 20px;
+    margin-bottom: 40px;
+    position: relative;
+    width: 90%;
+    height: 30%;
+    @include responsive(tab) {
+        width: 30%;
+        height: 80%;
+    }
+    @include responsive(pc) {
+      height: 90%;
+    }
+    h2 {
+        font-size: 20px;
+        padding: 0 20px;
+        position: absolute;
+        top: -10px;
+        background-color: white;
+        @include responsive(tab) {
+          padding: 20px 0 0;
+          position: inherit;
+          background-color: transparent;
+        }
+    }
+    ul {
+        font-size: 14px;
+        padding: 20px 0;
+        text-align: start;
+        li {
+          margin-bottom: 10px;
+          @include responsive(tab) {
+            margin-bottom: 20px;
+          }
+          p {
+            overflow-wrap: break-word;
+            padding: 5px 0 0 10px;
+            @include responsive(tab) {
+              padding: 10px 0 0 10px;
+            }
+          }
+        }
+        .swiper-slide__pctext {
+          display: none;
+          @include responsive(pc){
+            display: block;
+          }
+        }
+    }
+}
+
+.swiper-pagination-bullet {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  font-size: 12px;
+  color: white;
+  opacity: 1;
+  background: rgba(88, 88, 88, 0.8);
+  cursor: pointer;
+  
+}
+
+.swiper-pagination-bullet-active {
+  color: #fff;
+  background: #007aff;
+  
+}
+
