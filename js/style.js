@@ -38,14 +38,15 @@ $(window).bind('load',function(){
     } );
   } );
 
+
 // ==========================================================================
 //ハンバーガーボタンオープン時、メニューをクリックした時にメニューを閉じる
 $('.p-gnav a[href]').on('click', function(event) {
   $('.js-hamburger').trigger('click');
 });
-
-
 $("要素").addClass("changed");
+
+
 // ==========================================================================
 //セクション毎にメニュー色変更
 $(function(){	
@@ -68,36 +69,10 @@ else//それ以外（つまりセクション１である場合）はこれ
 $(".js-color").removeClass("is-white");
    });
 }); 
-// $(function(){	
-//   $(window).scroll(function(){
-// //セクション２から３の間はこれ
-// if ($(window).scrollTop() > $('.js-sec2').offset().top && $(window).scrollTop() < $('.js-sec3').offset().top){
-// $(".list").css("color", "#fff");
-// $(".p-hamburger").css("border-color", "#fff") ;
-// }
-// else if ($(window).scrollTop() > $('.js-sec3').offset().top && $(window).scrollTop() < $('.js-sec4').offset().top){
-//   $(".list").css("color", "#000");
-//   $(".p-hamburger").css("border-color", "#000");
-// }
-// else if ($(window).scrollTop() > $('.js-sec4').offset().top && $(window).scrollTop() < $('.js-sec5').offset().top){
-//   $(".list").css("color", "#fff");
-//   $(".p-hamburger").css("border-color", "#fff");
-// }
-// //セクション5より進んだらこれ
-// else if($(window).scrollTop() > $('.js-sec5').offset().top){
-// $(".list").css("color", "#000");
-// $(".p-hamburger").css("border-color", "#000");
-// }
-// else//それ以外（つまりセクション１である場合）はこれ
-//   $(".list").css("color", "#000");
-//   $(".p-hamburger").css("border-color", "#000");
-//    });
-// }); 
 
 
-
-
-
+// ==========================================================================
+// フローティングボタンの作成
 
 //スクロールした際の動きを関数でまとめる
 function setFadeElement(){
@@ -108,20 +83,12 @@ function setFadeElement(){
   var contentsTop = Math.round($('.js-sec3').offset().top);  //要素までの高さを四捨五入した値で取得
   var contentsH = $('.js-sec3').outerHeight(true); //要素の高さを取得
     
-    //2つ目の出現範囲の指定※任意
-  //var contentsTop2 = Math.round($('#area-5').offset().top); //要素までの高さを取得
-  //var contentsH2 = $('#area-5').outerHeight(true);//要素の高さを取得
-
     //出現範囲内に入ったかどうかをチェック
   if(scroll+windowH >= contentsTop && scroll+windowH  <= contentsTop+contentsH * 3){
     $("#page-top").addClass("UpMove");    //入っていたらUpMoveをクラス追加
     $("#page-top").removeClass("DownMove");   //DownMoveを削除
     $(".hide-btn").removeClass("hide-btn");   //hide-btnを削除
-  }//2つ目の出現範囲に入ったかどうかをチェック※任意
-   // else if(scroll+windowH >= contentsTop2 && scroll+windowH <= contentsTop2+contentsH2){       
-    //$("#page-top").addClass("UpMove");    //入っていたらUpMoveをクラス追加
-    //$("#page-top").removeClass("DownMove");   //DownMoveを削除
-  //}//それ以外は
+  }
     else{
         if(!$(".hide-btn").length){       //サイト表示時にDownMoveクラスを一瞬付与させないためのクラス付け。hide-btnがなければ下記の動作を行う
     $("#page-top").addClass("DownMove");  //DownMoveをクラス追加
@@ -140,12 +107,22 @@ $(window).on('load', function () {
   setFadeElement();/* スクロールした際の動きの関数を呼ぶ*/
 });
 
-
-
 // #page-topをクリックした際の設定
 $('#page-top').click(function () {
     $('body,html').animate({
         scrollTop: 0//ページトップまでスクロール
     }, 500);//ページトップスクロールの速さ。数字が大きいほど遅くなる
     return false;//リンク自体の無効化
+});
+
+// ==========================================================================
+// swiperのoption ページネーション
+let swiper = new Swiper(".mySwiper", {
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+    renderBullet: function (index, className) {
+      return '<span class="' + className + '">' + (index + 1) + "</span>";
+    },
+  },
 });

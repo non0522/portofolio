@@ -13,14 +13,9 @@ main {
 }
 
 main .swiper-container {
-  background-color: white;
-  width: 90%;
   height: calc(96vh - 80px);
-  // height: 100%;
-  box-shadow: 2px 2px 9px 7px rgba(10,10,10,0.3);
   z-index: inherit;
   @include responsive(tab) {
-    padding-top: 30px;
   }
   .swiper-wrapper {
     z-index: inherit;
@@ -34,10 +29,13 @@ main .swiper-container {
     display: flex;
     flex-direction: column;
     text-align: center;
-    // font-size: 18px;
-    background: #fff;
     justify-content: center;
     align-items: center;
+    max-width: 90%;
+    margin: 0 5vw;
+    padding-top: 30px;
+    background: white;
+    box-shadow: 2px 2px 9px 7px rgba(10,10,10,0.3);
     @include responsive(tab) {
       align-items: flex-start;
       flex-direction: row;

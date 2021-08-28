@@ -28,8 +28,12 @@
         }
         p:last-child {
             color: white;
-            
             background: rgb(165, 165, 165,);
+            &:hover {
+                background-color: #06A1A6;
+                opacity: .7;
+                transition: .8s;
+            }
         }
     }
 }

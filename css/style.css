@@ -14,6 +14,7 @@ body {
 
 a {
   text-decoration: none;
+  cursor: pointer;
 }
 
 li {
@@ -845,20 +846,7 @@ body {
   left: 100%;
   -webkit-transition: all 0.35s cubic-bezier(0.65, 0, 0.35, 1);
   transition: all 0.35s cubic-bezier(0.65, 0, 0.35, 1);
-}
-
-.p-works__hide:hover {
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  -webkit-transition: .5s;
-  transition: .5s;
-}
-
-.p-works__hide:hover + .p-works__imgframe {
-  opacity: .3;
-  -webkit-transition: .5s;
-  transition: .5s;
+  pointer-events: none;
 }
 
 .p-works h4 {
@@ -876,7 +864,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: #942D2F;
+  background: #06A1A6;
   border-radius: 5px;
   width: 60px;
   height: 60px;
@@ -895,7 +883,7 @@ body {
 
 @media screen and (max-width: 768px) {
   #page-top a:hover {
-    background: #942D2F;
+    background: #06A1A6;
   }
 }
 
@@ -1023,6 +1011,13 @@ body {
   background: #a5a5a5;
 }
 
+.p-contact__input p:last-child:hover {
+  background-color: #06A1A6;
+  opacity: .7;
+  -webkit-transition: .8s;
+  transition: .8s;
+}
+
 .p-hamburger {
   width: 40px;
   height: 40px;
@@ -1116,18 +1111,8 @@ main {
 }
 
 main .swiper-container {
-  background-color: white;
-  width: 90%;
   height: calc(96vh - 80px);
-  -webkit-box-shadow: 2px 2px 9px 7px rgba(10, 10, 10, 0.3);
-          box-shadow: 2px 2px 9px 7px rgba(10, 10, 10, 0.3);
   z-index: inherit;
-}
-
-@media screen and (min-width: 520px) {
-  main .swiper-container {
-    padding-top: 30px;
-  }
 }
 
 main .swiper-container .swiper-wrapper {
@@ -1147,13 +1132,18 @@ main .swiper-container .swiper-slide {
       -ms-flex-direction: column;
           flex-direction: column;
   text-align: center;
-  background: #fff;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  max-width: 90%;
+  margin: 0 5vw;
+  padding-top: 30px;
+  background: white;
+  -webkit-box-shadow: 2px 2px 9px 7px rgba(10, 10, 10, 0.3);
+          box-shadow: 2px 2px 9px 7px rgba(10, 10, 10, 0.3);
 }
 
 @media screen and (min-width: 520px) {

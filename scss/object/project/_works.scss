@@ -82,16 +82,17 @@
         top: 40%;
         left: 100%;
         transition: all 0.35s cubic-bezier(0.65, 0, 0.35, 1);
-        &:hover {
-          left: 50%;
-          transform: translateX(-50%);
-          transition: .5s;
-          & + .p-works__imgframe{
+        pointer-events: none;
+        // &:hover {
+        //   left: 50%;
+        //   transform: translateX(-50%);
+        //   transition: .5s;
+        //   & + .p-works__imgframe{
            
-            opacity: .3;
-            transition: .5s;
-          }
-        }
+        //     opacity: .3;
+        //     transition: .5s;
+        //   }
+        // }
     
     }
     h4 {
@@ -109,7 +110,7 @@
     display: flex;
     justify-content:center;
     align-items:center;
-    background:#942D2F;
+    background:#06A1A6;
     border-radius: 5px;
     width: 60px;
     height: 60px;
@@ -127,7 +128,7 @@
   
   @media screen and (max-width:768px) {
    #page-top a:hover{
-    background:#942D2F;
+    background:#06A1A6;
   }   
   }
   
